@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
 	<meta charset="UTF-8">
 	<title>AngularJS Template</title>
 </head>
 <body>
 
+	<h1>Basic AngularJS Examples</h1>
 
+	<h2>Data Binding:</h2>
+
+	<input type="text" ng-init="testValue = 'Enter random stuff here'" ng-model="testValue" ng-hide="isInputHidden">
+	<p>The value entered is: {{testValue}}</p>
+	<p>Another way to bind to a scope value: <span ng-bind="testValue"></span></p>
+
+	<input type="checkbox" ng-model="isInputHidden" /> Hide the input
+	
+	<p><button ng-click="testValue='Meowww!!'">Say Meow</button></p>
+
+	<!-- Other useful directives:
+	ng-cloak: Sets display:none while angular compiles
+	ng-switch on="" / ng-switch-when="" / ng-switch-default=""
+	ng-class
+	ng-show
+	-->
 	<script src="bundle.js"></script>
 	
 </body>
